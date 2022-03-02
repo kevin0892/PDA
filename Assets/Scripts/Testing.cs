@@ -1,1 +1,2 @@
-public bool gay = false;
+public bool gay = true;
+print("morion te amo");
