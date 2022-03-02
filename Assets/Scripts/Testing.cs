@@ -1,1 +1,6 @@
-public bool gay = false;
+using UnityEngine;
+
+public class Testing : MonoBehaviour
+{
+    public bool gay = false;
+}
