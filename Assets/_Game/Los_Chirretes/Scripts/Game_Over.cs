@@ -9,11 +9,14 @@ public class Game_Over : MonoBehaviour
     public Char_Movement character;
     public Canvas canvas;
     public RectTransform panelIllus;
+    public int illusCount;
+    public Playerprefs _playerPrefs;
 // public TMPro.Tex
     // Start is called before the first frame update
     private void Awake()
     {
         Objects.OnImpact += Objects_OnImpact;
+        illusCount = _playerPrefs.numPuntaje;
     }
 
     private void Objects_OnImpact(ImpactType impactType, ImpactClass impactClass)
@@ -30,8 +33,12 @@ public class Game_Over : MonoBehaviour
         else if (impactType == ImpactType.collectable && impactClass == ImpactClass.illustrator)
         {
             print("Illus");
-            panelIllus.gameObject.SetActive(true);
-            PauseGame();
+            illusCount++;
+            _playerPrefs.numPuntaje = illusCount;
+            PlayerPrefs.SetInt("Illustrator", _playerPrefs.numPuntaje);
+            PlayerPrefs.Save();
+            //panelIllus.gameObject.SetActive(true);
+            //PauseGame();
 
         }
     }
