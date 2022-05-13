@@ -14,6 +14,11 @@ public class Objects : MonoBehaviour
         if (other.tag == "Player")
         {
             OnImpact?.Invoke(impactType, impactClass);
+            if (this.gameObject.tag != "Impact")
+            {
+                this.gameObject.SetActive(false);
+            }
+            
         }
     }
 
@@ -35,8 +40,9 @@ public enum ImpactType
 public enum ImpactClass
 {
     none,
-    illustrator,
-    photoshop
+    unity,
+    mouse,
+    computer
 }
 
 
