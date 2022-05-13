@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c1bdcba1ce9f7894f951a241681e0a14
+guid: 5190f378328ade149a4bb16b0b20bee7
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: defaultMat
-    second: {fileID: 2100000, guid: 3530651ad8e755d49a42e9a8f7c9ea8c, type: 2}
+      name: palette.001
+    second: {fileID: 2100000, guid: 1ccc5eb9648e68a489c69318779ef5f0, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: camino_01_Aslfato
+    second: {fileID: 2800000, guid: cf0d024acd95c964ebb2386cb9935621, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -39,7 +44,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 2.027161
+    globalScale: 150
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -90,7 +95,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 2.027161
+    globalScale: 1.5
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
