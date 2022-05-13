@@ -46,9 +46,9 @@ public class Char_Movement : MonoBehaviour
     void Update()
     {
         yFinal = yOriginal + yOffset;
-        if (!Jumping && !Sliding && Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
-            StartCoroutine(toJump());
+            Saltar();
         }
 
         if (!Jumping && !Sliding && Input.GetButtonDown("Vertical"))
@@ -63,6 +63,19 @@ public class Char_Movement : MonoBehaviour
             Bullets();
             
         }
+    }
+
+    public void Saltar()
+    {
+        if (!Jumping && !Sliding)
+        {
+            StartCoroutine(toJump());
+        }
+    }
+
+    public void Deslizar()
+    {
+
     }
 
     public IEnumerator toJump()
