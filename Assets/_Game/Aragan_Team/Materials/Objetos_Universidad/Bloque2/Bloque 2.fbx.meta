@@ -1,9 +1,69 @@
 fileFormatVersion: 2
-guid: bc823e3c972bfa444a9f3efc74e7d576
+guid: 4d19363bab53e8846828151b46336eae
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: palette
+    second: {fileID: 2100000, guid: 78300c867b7c6a0468fd67b91df625da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: palette.001
+    second: {fileID: 2100000, guid: d892afa2232604e448e92add406e8dd7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: palette.002
+    second: {fileID: 2100000, guid: 71a903c3c2485cc4297fed6844149c73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: palette.003
+    second: {fileID: 2100000, guid: 19238298e6f28e74e8c56b5353febee2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: palette.004
+    second: {fileID: 2100000, guid: 506e1c23867efe94d94da61c835c78f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: palette.005
+    second: {fileID: 2100000, guid: 0f7f0d639ccddf64cb9b712add6068cb, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bloque 2 final-0
+    second: {fileID: 2800000, guid: c6bcf997f6262324580d96a700f5878d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bloque 2 final-1
+    second: {fileID: 2800000, guid: f87553deb12125a4eb5304c155a2f406, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bloque 2 final-2
+    second: {fileID: 2800000, guid: 5c514ea473aa34d4f92dd03021d5eed9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bloque 2 final-3
+    second: {fileID: 2800000, guid: 67b33c646c90af24dbb8fd5c0ca08f3d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bloque 2 final-4
+    second: {fileID: 2800000, guid: 3e7e0e4cad301ff45bcaf3634d4dcd79, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bloque 2 final-5
+    second: {fileID: 2800000, guid: c97ad1ad87626c349b01c2cce807037c, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
