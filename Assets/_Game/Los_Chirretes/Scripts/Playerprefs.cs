@@ -58,7 +58,7 @@ public class Playerprefs : MonoBehaviour
     public void IniciarMenu(string nivel)
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
 
     public void ReiniciarNivel(string nivel)

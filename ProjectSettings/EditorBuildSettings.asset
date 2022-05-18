@@ -6,33 +6,33 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/EscenaAraganTeam.unity
-    guid: b00d300615229f143a2108df2b184132
-  - enabled: 1
-    path: Assets/Scenes/EscenaKevinYFelipe.unity
-    guid: ca91da44b0e4f594b912a355cb347143
-  - enabled: 1
     path: Assets/Scenes/Menu_Kev_Felipe.unity
     guid: 1cfe530713d538249903566846cae51d
   - enabled: 1
+    path: Assets/Scenes/EscenaKevinYFelipe.unity
+    guid: ca91da44b0e4f594b912a355cb347143
+  - enabled: 0
+    path: Assets/Scenes/EscenaAraganTeam.unity
+    guid: b00d300615229f143a2108df2b184132
+  - enabled: 0
     path: Assets/Scenes/Level_01.unity
     guid: 5f459a6aecb4f204fb8bf6cfff5a8c7e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level_02.unity
     guid: da7577279dec1b0419837224315f0422
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level_03.unity
     guid: dbee6028ec3691d479af067f18296c48
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level_04.unity
     guid: bd3b05e4a56a92147bc6f674e8ed0b52
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level_05.unity
     guid: df4d897c9d678b947b32137dc98736d2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level_06.unity
     guid: d7a3e05989f400f41a6fe18ef9e2465a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level_End.unity
     guid: a6cd118a517a9b142bb91c4b00f64a05
   m_configObjects: {}
