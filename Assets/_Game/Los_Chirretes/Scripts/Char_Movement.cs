@@ -6,6 +6,7 @@ public class Char_Movement : MonoBehaviour
 {
     public AnimationCurve jumpCurve;
     public AnimationCurve slideCurve;
+    public Animator anim;
 
     private bool Jumping = false;
     private bool Sliding = false;
@@ -44,12 +45,14 @@ public class Char_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        anim = GetComponent<Animator>();
         tr = transform;
         yOriginal = tr.position.y;
         xOriginal = tr.position.x;
         zOriginal = tr.position.z;
         zRotation = tr.rotation.z;
         lives = 3;
+
     }
 
     // Update is called once per frame
@@ -105,6 +108,7 @@ public class Char_Movement : MonoBehaviour
 
     public IEnumerator toJump()
     {
+        anim.SetBool("isJumping", true);
         Jumping = true;
         float x = 0;
         while (x < JumpDuration)
@@ -114,6 +118,7 @@ public class Char_Movement : MonoBehaviour
             yield return null;
         }
         Jumping = false;
+        anim.SetBool("isJumping", false);
     }
 
     public IEnumerator toSlide()
