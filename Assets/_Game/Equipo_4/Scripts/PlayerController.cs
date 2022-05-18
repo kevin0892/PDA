@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private Animator anim;
     public Joystick joystick;
+    private float x, z;
 
 
     [Header("UI")]
@@ -40,11 +41,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         #if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
-            float x = Input.GetAxisRaw("Horizontal");
-            float z = Input.GetAxisRaw("Vertical");
+
+            x = Input.GetAxisRaw("Horizontal");
+            z = Input.GetAxisRaw("Vertical");
             Move(x, 0f, z);
 
         #elif UNITY_ANDROID || UNITY_IPHONE
+        
             if (joystick.Horizontal > 0.2 || joystick.Horizontal < -0.2)
             {
                 x = joystick.Horizontal;
@@ -52,9 +55,9 @@ public class PlayerController : MonoBehaviour
             else { x = 0; }
             if (joystick.Vertical > 0.2 || joystick.Vertical <-0.2)
             {
-                y = joystick.Vertical;
+                z = joystick.Vertical;
             }
-            else { y = 0; }
+            else { z = 0; }
             Move(x, 0f, z);
 
         #endif
