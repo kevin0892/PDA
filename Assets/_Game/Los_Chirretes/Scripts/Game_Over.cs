@@ -17,14 +17,18 @@ public class Game_Over : MonoBehaviour
     public Char_Movement character;
     public Canvas canvas;
     public RectTransform panelIllus;
+    public GameObject panelGameOver;
+    public GameObject panelPaused;
     public Playerprefs _playerPrefs;
     public GameObject chica;
     public GameObject chico;
     private int charSelection;
-// public TMPro.Tex
+
     // Start is called before the first frame update
     private void Awake()
     {
+        panelPaused.SetActive(false);
+        panelGameOver.SetActive(false);
         Objects.OnImpact += Objects_OnImpact;
         unityCount = _playerPrefs.numPuntaje;
         mouseCount = _playerPrefs.numPuntajeMouse;
@@ -47,7 +51,16 @@ public class Game_Over : MonoBehaviour
     {
         if (impactType == ImpactType.impact && impactClass == ImpactClass.none)
         {
-            print("chingatumadre");
+            //if (character.lives >= 1)
+            //{
+                character.GetDamage(1);
+                if (character.lives <= 0)
+                {
+                    PauseGame();
+                    panelGameOver.SetActive(true);
+                }
+            //}
+            
         }
         else if (impactType == ImpactType.munition && impactClass == ImpactClass.none)
         {
@@ -115,6 +128,15 @@ public class Game_Over : MonoBehaviour
 
     public void PauseGame()
     {
-        Time.timeScale = 0;
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+            panelPaused.SetActive(false);
+        }
+        else
+        {
+            Time.timeScale = 0;
+            panelPaused.SetActive(true);
+        }
     }
 }

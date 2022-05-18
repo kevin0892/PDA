@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class Selection : MonoBehaviour
 {
@@ -10,13 +12,17 @@ public class Selection : MonoBehaviour
     public float horizontalPos; 
     public int currentSelection;
     int totalCharacters=2;
-    // Start is called before the first frame update
+
+    //UI-Navigation Items
+    public GameObject panel_Coleccionables;
+    
+    
     void Start()
     {
         currentSelection = 1;
+        panel_Coleccionables.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -69,4 +75,19 @@ public class Selection : MonoBehaviour
             currentSelection--;
         }
     }
+
+    public void SwitchPanels()
+    {
+        if (panel_Coleccionables.activeSelf == false)
+        {
+            panel_Coleccionables.SetActive(true);
+        }
+        else
+        {
+            panel_Coleccionables.SetActive(false);
+        }
+        
+    }
+
+   
 }

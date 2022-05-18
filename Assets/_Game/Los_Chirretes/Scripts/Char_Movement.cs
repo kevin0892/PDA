@@ -22,6 +22,7 @@ public class Char_Movement : MonoBehaviour
     public float bulletTimeToDestroy = 2f;
     public bool canFire = true;
     public int munition = 10;
+   
 
     float yOriginal;
     float yOffset;
@@ -29,9 +30,17 @@ public class Char_Movement : MonoBehaviour
     float zOriginal;
     float zRotation;
     float yFinal;
+    Vector3 posIni;
+    public float verticalPos;
 
     internal Transform tr;
     public Transform Pivot;
+
+    //Life System
+    public int lives;
+    public GameObject[] hearts;
+    
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -40,21 +49,34 @@ public class Char_Movement : MonoBehaviour
         xOriginal = tr.position.x;
         zOriginal = tr.position.z;
         zRotation = tr.rotation.z;
+        lives = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
         yFinal = yOriginal + yOffset;
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetMouseButtonDown(0))
         {
-            Saltar();
+            posIni = Input.mousePosition;
+            
         }
-
-        if (!Jumping && !Sliding && Input.GetButtonDown("Vertical"))
-        {      
-            StartCoroutine(toSlide());
+        if (Input.GetMouseButtonUp(0))
+        {
+            if ((posIni - Input.mousePosition).magnitude > 150)
+            {
+                verticalPos = (posIni - Input.mousePosition).y;
+                if (verticalPos<0)
+                {
+                    Saltar();
+                }
+                else
+                {
+                    Deslizar();
+                }
+            }
         }
+        
         tr.position = new Vector3(xOriginal, yFinal, zOriginal);
 
         Pivot.rotation = Quaternion.Euler(0, 0, zRotation);
@@ -75,7 +97,10 @@ public class Char_Movement : MonoBehaviour
 
     public void Deslizar()
     {
-
+        if (!Jumping && !Sliding)
+        {
+            StartCoroutine(toSlide());
+        }
     }
 
     public IEnumerator toJump()
@@ -155,5 +180,14 @@ public class Char_Movement : MonoBehaviour
         munition += qtty;
     }
 
+    public void GetDamage(int qtty)
+    {
+        lives = lives - qtty;
+        if (lives >= 0)
+        {
+            hearts[lives].gameObject.SetActive(false);
+        }
+        
+    }
    
 }

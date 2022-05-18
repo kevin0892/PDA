@@ -35,7 +35,7 @@ public class Playerprefs : MonoBehaviour
         
     }
 
-    public void ReiniciarNivel(string nivel)
+    public void TestReiniciarNivel(string nivel)
     {
         
         SceneManager.LoadScene(1);
@@ -55,11 +55,30 @@ public class Playerprefs : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void IniciarMenu(string nivel)
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(1);
+    }
+
+    public void ReiniciarNivel(string nivel)
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
+    }
+
     public void CharSelect(int player)
     {
         player = selection.currentSelection;
         PlayerPrefs.SetInt("Player", player);
         PlayerPrefs.Save();
+    }
+    
+    public void DeletePrefs()
+    {
+        PlayerPrefs.DeleteKey("Unity");
+        PlayerPrefs.DeleteKey("Mouse");
+        PlayerPrefs.DeleteKey("Computer");
     }
 
 
