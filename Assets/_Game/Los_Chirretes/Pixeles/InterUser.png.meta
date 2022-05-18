@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: 4a51236e0c3fe5644aba2038837eb744
+guid: a05b4a66909fa7643b1dc2647b92b886
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8566821586260854210
+    second: InterUser_0
+  - first:
+      213: 4020007097722138894
+    second: InterUser_1
+  - first:
+      213: 5844493750217450648
+    second: InterUser_3
+  - first:
+      213: 6122447493102358637
+    second: InterUser_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +53,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -101,11 +113,95 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: InterUser_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 81
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 7, y: 7, z: 7, w: 7}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c50a3ff7d673e670800000000000000
+      internalID: 8566821586260854210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterUser_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 87
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01f64e082fe9c730800000000000000
+      internalID: 4020007097722138894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterUser_3
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 23
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 894a3b1b910db1150800000000000000
+      internalID: 5844493750217450648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InterUser_4
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 12
+        width: 61
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60d85e8e8d47f450800000000000000
+      internalID: 6122447493102358637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: a3767193fbf69b546a6ffa8f644d2d49
     internalID: 0
     vertices: []
     indices: 
