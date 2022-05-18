@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_End.unity
     guid: a6cd118a517a9b142bb91c4b00f64a05
+  - enabled: 1
+    path: Assets/sego/Escenas/Back_Level_01.unity
+    guid: f5904262b4395f341a99c8809231b4ac
+  - enabled: 1
+    path: Assets/sego/Escenas/Back_Level_022.unity
+    guid: 491b2f701b0ed884d91868f0994f4ec8
   m_configObjects: {}
