@@ -23,10 +23,12 @@ public class Game_Over : MonoBehaviour
     public GameObject chica;
     public GameObject chico;
     private int charSelection;
+    public bool pause;
 
     // Start is called before the first frame update
     private void Awake()
     {
+        pause = false;
         panelPaused.SetActive(false);
         panelGameOver.SetActive(false);
         Objects.OnImpact += Objects_OnImpact;
@@ -56,7 +58,7 @@ public class Game_Over : MonoBehaviour
                 character.GetDamage(1);
                 if (character.lives <= 0)
                 {
-                    PauseGame();
+                    Time.timeScale = 0;
                     panelGameOver.SetActive(true);
                 }
             //}
@@ -128,15 +130,17 @@ public class Game_Over : MonoBehaviour
 
     public void PauseGame()
     {
-        if (Time.timeScale == 0)
+        if (pause == true)
         {
             Time.timeScale = 1;
             panelPaused.SetActive(false);
+            pause = false;
         }
-        else
+        else if (pause == false)
         {
             Time.timeScale = 0;
             panelPaused.SetActive(true);
+            pause = true;
         }
     }
 }

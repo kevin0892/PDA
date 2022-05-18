@@ -79,6 +79,21 @@ public class Playerprefs : MonoBehaviour
         PlayerPrefs.DeleteKey("Unity");
         PlayerPrefs.DeleteKey("Mouse");
         PlayerPrefs.DeleteKey("Computer");
+        numPuntaje = 0;
+        numPuntajeComputer = 0;
+        numPuntajeMouse = 0;
+        textoPuntajeGlobal.text = PlayerPrefs.GetInt("Unity", 0).ToString();
+        
+        textoPuntajeGlobalMouse.text = PlayerPrefs.GetInt("Mouse", 0).ToString();
+        
+        textoPuntajeGlobalComputer.text = PlayerPrefs.GetInt("Computer", 0).ToString();
+        
+    }
+
+    public void QuitApp()
+    {
+        Application.Quit();
+        print("hola");
     }
 
 

@@ -14,9 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu_Kev_Felipe.unity
     guid: 1cfe530713d538249903566846cae51d
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Level_01.unity
     guid: 5f459a6aecb4f204fb8bf6cfff5a8c7e

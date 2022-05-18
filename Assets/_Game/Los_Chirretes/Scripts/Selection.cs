@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using TMPro;
+using System;
 
 public class Selection : MonoBehaviour
 {
@@ -15,12 +17,19 @@ public class Selection : MonoBehaviour
 
     //UI-Navigation Items
     public GameObject panel_Coleccionables;
-    
+    public GameObject panel_Descripciones;
+    public GameObject panel_Unity, panel_Mouse, panel_Computer;
+    public Playerprefs _playerPrefs;
+    public TMP_Text notificationText;
     
     void Start()
     {
         currentSelection = 1;
         panel_Coleccionables.SetActive(false);
+        panel_Descripciones.SetActive(false);
+        panel_Unity.SetActive(false);
+        panel_Mouse.SetActive(false);
+        panel_Computer.SetActive(false);
     }
 
     void Update()
@@ -89,5 +98,68 @@ public class Selection : MonoBehaviour
         
     }
 
+    public void OpenColeccionable(int number)
+    {
+        if (_playerPrefs.numPuntaje > 0)
+        {
+            if (number == 0) //Unity
+            {
+                panel_Descripciones.SetActive(true);
+                panel_Unity.SetActive(true);
+                panel_Mouse.SetActive(false);
+                panel_Computer.SetActive(false);
+            }
+        }
+        if (_playerPrefs.numPuntajeMouse > 0)
+        { 
+            if (number == 1) //Mouse
+            {
+                panel_Descripciones.SetActive(true);
+                panel_Mouse.SetActive(true);
+                panel_Unity.SetActive(false);
+                panel_Computer.SetActive(false);
+            }
+        }
+        if (_playerPrefs.numPuntajeComputer > 0)
+        {
+            if (number == 2) //Computer
+            {
+                panel_Descripciones.SetActive(true);
+                panel_Computer.SetActive(true);
+                panel_Mouse.SetActive(false);
+                panel_Unity.SetActive(false);
+            }
+        }
+        if (_playerPrefs.numPuntaje <= 0 && number == 0)
+        {
+            StartCoroutine(sendNotification("No has recogido ningún coleccionable de Unity", 3));
+        }
+        if (_playerPrefs.numPuntajeComputer <= 0 && number == 2)
+        {
+            StartCoroutine(sendNotification("No has recogido ningún coleccionable de Computadora", 3));
+        }
+        if (_playerPrefs.numPuntajeMouse <= 0 && number == 1)
+        {
+            StartCoroutine(sendNotification("No has recogido ningún coleccionable de Periféricos", 3));
+        }
+
+
+    }
+
+    public void BackToAlbum()
+    {
+        if (panel_Coleccionables.activeSelf == true && panel_Descripciones.activeInHierarchy == true)
+        {
+            //panel_Coleccionables.SetActive(true);
+            panel_Descripciones.SetActive(false);
+        }
+    }
+
+    IEnumerator sendNotification(string text, int time)
+    {
+        notificationText.text = text;
+        yield return new WaitForSeconds(time);
+        notificationText.text = "";
+    }
    
 }

@@ -7,6 +7,7 @@ public class Char_Movement : MonoBehaviour
     public AnimationCurve jumpCurve;
     public AnimationCurve slideCurve;
     public Animator anim;
+    public Animator anim2;
 
     private bool Jumping = false;
     private bool Sliding = false;
@@ -45,7 +46,7 @@ public class Char_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
         tr = transform;
         yOriginal = tr.position.y;
         xOriginal = tr.position.x;
@@ -66,7 +67,7 @@ public class Char_Movement : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
-            if ((posIni - Input.mousePosition).magnitude > 150)
+            if ((posIni - Input.mousePosition).magnitude > 100)
             {
                 verticalPos = (posIni - Input.mousePosition).y;
                 if (verticalPos<0)
@@ -108,7 +109,15 @@ public class Char_Movement : MonoBehaviour
 
     public IEnumerator toJump()
     {
-        anim.SetBool("isJumping", true);
+        if (anim.gameObject.activeInHierarchy == true)
+        {
+            anim.SetBool("isJumping", true);
+        }
+        if (anim2.gameObject.activeInHierarchy == true)
+        {
+            anim2.SetBool("isJumping", true);
+        }
+        
         Jumping = true;
         float x = 0;
         while (x < JumpDuration)
@@ -118,11 +127,28 @@ public class Char_Movement : MonoBehaviour
             yield return null;
         }
         Jumping = false;
-        anim.SetBool("isJumping", false);
+        if (anim.gameObject.activeInHierarchy == true)
+        {
+            anim.SetBool("isJumping", false);
+        }
+        if (anim2.gameObject.activeInHierarchy == true)
+        {
+            anim2.SetBool("isJumping", false);
+        }
+        
     }
 
     public IEnumerator toSlide()
     {
+        if (anim.gameObject.activeInHierarchy == true)
+        {
+            anim.SetBool("isSliding", true);
+        }
+        if (anim2.gameObject.activeInHierarchy == true)
+        {
+            anim2.SetBool("isSliding", true);
+        }
+       
         Sliding = true;
         float x = 0;
         while (x < SlideUpDownDuration)
@@ -141,6 +167,15 @@ public class Char_Movement : MonoBehaviour
             yield return null;
         }
         Sliding = false;
+        if (anim.gameObject.activeInHierarchy == true)
+        {
+            anim.SetBool("isSliding", false);
+        }
+        if (anim2.gameObject.activeInHierarchy == true)
+        {
+            anim2.SetBool("isSliding", false);
+        }
+        
     }
 
     private void Bullets()
