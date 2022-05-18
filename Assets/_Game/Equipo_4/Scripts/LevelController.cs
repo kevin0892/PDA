@@ -18,7 +18,10 @@ public class LevelController : MonoBehaviour
     }
     void Update()
     {
-        currentAmmount = player.ItemAmmount;
+        if (player)
+        {
+            currentAmmount = player.ItemAmmount;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

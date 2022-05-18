@@ -11,14 +11,29 @@ public class UIController : MonoBehaviour
     private int currentAmmount;
 
     public GameObject lvlStartedMsg;
+
+    public GameObject joystick;
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
     }
 
     void Update()
-    {
-        currentAmmount = player.ItemAmmount;
+    {   
+        if (player)
+        {
+            currentAmmount = player.ItemAmmount;
+        }
+
+        #if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
+
+            joystick.SetActive(false);
+
+        #elif UNITY_ANDROID || UNITY_IPHONE
+
+            joystick.SetActive(true);
+
+        #endif
     }
 
     public void ShowLevelStartMsg()
