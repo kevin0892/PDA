@@ -1430,8 +1430,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a15c8c6fe7cdcd44ab3fc1be9999b383, type: 2}
+  m_sharedMaterial: {fileID: 6679193962127214462, guid: a15c8c6fe7cdcd44ab3fc1be9999b383, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1521,8 +1521,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16.208916, y: -49.477753}
-  m_SizeDelta: {x: 53.0082, y: 50}
+  m_AnchoredPosition: {x: 4.697, y: -49.477753}
+  m_SizeDelta: {x: 71.855, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &738154236
 GameObject:
@@ -1558,8 +1558,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22.980011, y: -40.8}
-  m_SizeDelta: {x: 54.0663, y: 50}
+  m_AnchoredPosition: {x: 9.2733, y: -40.8}
+  m_SizeDelta: {x: 81.4798, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &738154238
 CanvasRenderer:
@@ -1591,8 +1591,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a15c8c6fe7cdcd44ab3fc1be9999b383, type: 2}
+  m_sharedMaterial: {fileID: 6679193962127214462, guid: a15c8c6fe7cdcd44ab3fc1be9999b383, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1733,8 +1733,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a15c8c6fe7cdcd44ab3fc1be9999b383, type: 2}
+  m_sharedMaterial: {fileID: 6679193962127214462, guid: a15c8c6fe7cdcd44ab3fc1be9999b383, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1824,8 +1824,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23.318384, y: -41}
-  m_SizeDelta: {x: 51.639, y: 50}
+  m_AnchoredPosition: {x: 10.4683, y: -41}
+  m_SizeDelta: {x: 77.3392, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &832657082
 GameObject:
@@ -2264,7 +2264,7 @@ GameObject:
   - component: {fileID: 935831894}
   - component: {fileID: 935831893}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Juego_en_Pausa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2287,7 +2287,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -4, y: 132}
-  m_SizeDelta: {x: 363.3108, y: 50}
+  m_SizeDelta: {x: 441.929, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &935831893
 MonoBehaviour:
@@ -2309,10 +2309,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1JUEGO EN PAUSA!"
+  m_text: JUEGO EN PAUSA!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 454283632fd21234eb387b3a4f95ff46, type: 2}
+  m_sharedMaterial: {fileID: 7257603698718330437, guid: 454283632fd21234eb387b3a4f95ff46, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
