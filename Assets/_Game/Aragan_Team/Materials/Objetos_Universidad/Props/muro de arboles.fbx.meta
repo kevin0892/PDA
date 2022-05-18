@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0fcd531b2424a2e4da3de5e6d4730f26
+guid: 77dd8760e51b88348acd9792a88643eb
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,13 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: palette.018
-    second: {fileID: 2100000, guid: 7a0f5c27dcd9040419c92a50bc79dea1, type: 2}
+      name: palette
+    second: {fileID: 2100000, guid: d623c600a8eeb2a458c6470d489339b1, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Calle_00
-    second: {fileID: 2800000, guid: 8ca2fd6459c5fbb49b411cc24b960c82, type: 3}
+      name: Muro de arboles
+    second: {fileID: 2800000, guid: a6c1a4c2f5f6ee749ad4ee834051dfed, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
