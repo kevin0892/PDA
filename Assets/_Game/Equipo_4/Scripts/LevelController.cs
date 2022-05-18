@@ -9,6 +9,7 @@ public class LevelController : MonoBehaviour
     private UIController uiManage;
     private int currentAmmount;
     public string nextLevelName;
+    public string mainLevelName;
 
     void Start()
     {
@@ -33,5 +34,11 @@ public class LevelController : MonoBehaviour
                 uiManage.ShowNoPointsOverlay();
             }
         }
+    }
+
+    public void LoadMainLevel(string mainLvl)
+    {
+
+        SceneManager.LoadScene(mainLvl);
     }
 }
