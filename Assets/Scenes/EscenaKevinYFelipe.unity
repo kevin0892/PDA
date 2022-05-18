@@ -379,7 +379,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.5, y: -95.3}
+  m_AnchoredPosition: {x: 6.6, y: -84.2}
   m_SizeDelta: {x: 309.7898, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &44271866
@@ -402,17 +402,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Record de coleccionables
+  m_text: Record global
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a15c8c6fe7cdcd44ab3fc1be9999b383, type: 2}
+  m_sharedMaterial: {fileID: 6679193962127214462, guid: a15c8c6fe7cdcd44ab3fc1be9999b383, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278315258
-  m_fontColor: {r: 0.9811321, g: 0.9096428, b: 0.0046279924, a: 1}
+    rgba: 4293644806
+  m_fontColor: {r: 0.023529414, g: 0.8235295, b: 0.9215687, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
