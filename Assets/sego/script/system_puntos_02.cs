@@ -26,6 +26,10 @@ public class system_puntos_02 : MonoBehaviour
 		TextoPuntos.text = "Puntos:10/" + Puntos; 
 	}
 
+	private void Start() {
+		Time.timeScale = 1;
+	}
+
 	private void Update()
 	{
 		if (Puntos == 10)
