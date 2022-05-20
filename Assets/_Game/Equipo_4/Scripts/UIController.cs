@@ -19,21 +19,21 @@ public class UIController : MonoBehaviour
     }
 
     void Update()
-    {   
+    {
         if (player)
         {
             currentAmmount = player.ItemAmmount;
         }
 
-        #if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
 
-            joystick.SetActive(false);
+        joystick.SetActive(false);
 
-        #elif UNITY_ANDROID || UNITY_IPHONE
+#elif UNITY_ANDROID || UNITY_IPHONE
 
-            joystick.SetActive(true);
+        joystick.SetActive(true);
 
-        #endif
+#endif
     }
 
     public void ShowLevelStartMsg()
@@ -55,7 +55,9 @@ public class UIController : MonoBehaviour
     IEnumerator LvlStarted()
     {
         lvlStartedMsg.SetActive(true);
-        yield return new WaitForSeconds(3F);
+        Time.timeScale = 0f;
+        yield return new WaitForSecondsRealtime(8F);
+        Time.timeScale = 1f;
         lvlStartedMsg.SetActive(false);
     }
     IEnumerator NoPoints()
