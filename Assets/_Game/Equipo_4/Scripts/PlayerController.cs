@@ -40,13 +40,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        #if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
 
-            x = Input.GetAxisRaw("Horizontal");
-            z = Input.GetAxisRaw("Vertical");
-            Move(x, 0f, z);
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
 
-        #elif UNITY_ANDROID || UNITY_IPHONE
+        x = Input.GetAxisRaw("Horizontal");
+        z = Input.GetAxisRaw("Vertical");
+        Move(x, 0f, z);
+
+#elif UNITY_ANDROID || UNITY_IPHONE
         
             if (joystick.Horizontal > 0.2 || joystick.Horizontal < -0.2)
             {
@@ -60,7 +61,7 @@ public class PlayerController : MonoBehaviour
             else { z = 0; }
             Move(x, 0f, z);
 
-        #endif
+#endif
 
     }
 
