@@ -8,6 +8,7 @@ public class Char_Movement : MonoBehaviour
     public AnimationCurve slideCurve;
     public Animator anim;
     public Animator anim2;
+    public Audio_Manager _audio;
 
     private bool Jumping = false;
     private bool Sliding = false;
@@ -73,10 +74,12 @@ public class Char_Movement : MonoBehaviour
                 if (verticalPos<0)
                 {
                     Saltar();
+                    
                 }
                 else
                 {
                     Deslizar();
+                    
                 }
             }
         }
@@ -96,6 +99,7 @@ public class Char_Movement : MonoBehaviour
         if (!Jumping && !Sliding)
         {
             StartCoroutine(toJump());
+            _audio._audioSource.PlayOneShot(_audio.jumping);
         }
     }
 
@@ -104,6 +108,7 @@ public class Char_Movement : MonoBehaviour
         if (!Jumping && !Sliding)
         {
             StartCoroutine(toSlide());
+            _audio._audioSource.PlayOneShot(_audio.sliding);
         }
     }
 

@@ -16,15 +16,18 @@ public class Selection : MonoBehaviour
     int totalCharacters=2;
 
     //UI-Navigation Items
+    public GameObject panel_Objetivo;
     public GameObject panel_Coleccionables;
     public GameObject panel_Descripciones;
     public GameObject panel_Unity, panel_Mouse, panel_Computer;
     public Playerprefs _playerPrefs;
     public TMP_Text notificationText;
+    public Audio_Manager _audio;
     
     void Start()
     {
         currentSelection = 1;
+        panel_Objetivo.SetActive(false);
         panel_Coleccionables.SetActive(false);
         panel_Descripciones.SetActive(false);
         panel_Unity.SetActive(false);
@@ -72,6 +75,7 @@ public class Selection : MonoBehaviour
             currentAngle = transform.eulerAngles;
             targetRot = targetRot + new Vector3(0, 90, 0);
             currentSelection++;
+            _audio._audioSource.PlayOneShot(_audio.jumping);
         }
     }
 
@@ -82,6 +86,7 @@ public class Selection : MonoBehaviour
             currentAngle = transform.eulerAngles;
             targetRot = targetRot - new Vector3(0, 90, 0);
             currentSelection--;
+            _audio._audioSource.PlayOneShot(_audio.sliding);
         }
     }
 
@@ -96,6 +101,19 @@ public class Selection : MonoBehaviour
             panel_Coleccionables.SetActive(false);
         }
         
+    }
+
+    public void SwitchObjetivo()
+    {
+        if (panel_Objetivo.activeSelf == false)
+        {
+            panel_Objetivo.SetActive(true);
+        }
+        else
+        {
+            panel_Objetivo.SetActive(false);
+        }
+
     }
 
     public void OpenColeccionable(int number)

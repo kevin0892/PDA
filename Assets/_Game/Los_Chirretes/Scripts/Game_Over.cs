@@ -25,6 +25,8 @@ public class Game_Over : MonoBehaviour
     private int charSelection;
     public bool pause;
 
+    public Audio_Manager _audio;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -56,6 +58,7 @@ public class Game_Over : MonoBehaviour
             //if (character.lives >= 1)
             //{
                 character.GetDamage(1);
+            _audio._audioSource.PlayOneShot(_audio.impact);
                 if (character.lives <= 0)
                 {
                     Time.timeScale = 0;
@@ -75,6 +78,7 @@ public class Game_Over : MonoBehaviour
             unityCount++;           
             textoPuntajeLocal.text = unityCount.ToString();
             _playerPrefs.numPuntaje = unityCount;
+            _audio._audioSource.PlayOneShot(_audio.collectables);
 
             if (_playerPrefs.numPuntaje >= PlayerPrefs.GetInt("Unity",0))
             {
@@ -92,6 +96,7 @@ public class Game_Over : MonoBehaviour
             mouseCount++;
             textoPuntajeLocalMouse.text = mouseCount.ToString();
             _playerPrefs.numPuntajeMouse = mouseCount;
+            _audio._audioSource.PlayOneShot(_audio.collectables);
 
             if (_playerPrefs.numPuntajeMouse >= PlayerPrefs.GetInt("Mouse", 0))
             {
@@ -109,6 +114,7 @@ public class Game_Over : MonoBehaviour
             computerCount++;
             textoPuntajeLocalComputer.text = computerCount.ToString();
             _playerPrefs.numPuntajeComputer = computerCount;
+            _audio._audioSource.PlayOneShot(_audio.collectables);
 
             if (_playerPrefs.numPuntajeComputer >= PlayerPrefs.GetInt("Computer", 0))
             {

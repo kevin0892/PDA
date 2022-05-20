@@ -6,14 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/EscenaAraganTeam.unity
+    guid: b00d300615229f143a2108df2b184132
+  - enabled: 1
     path: Assets/Scenes/Menu_Kev_Felipe.unity
     guid: 1cfe530713d538249903566846cae51d
   - enabled: 1
     path: Assets/Scenes/EscenaKevinYFelipe.unity
     guid: ca91da44b0e4f594b912a355cb347143
-  - enabled: 1
-    path: Assets/Scenes/EscenaAraganTeam.unity
-    guid: b00d300615229f143a2108df2b184132
   - enabled: 1
     path: Assets/Scenes/Level_01.unity
     guid: 5f459a6aecb4f204fb8bf6cfff5a8c7e

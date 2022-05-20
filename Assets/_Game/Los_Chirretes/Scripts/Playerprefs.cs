@@ -49,22 +49,22 @@ public class Playerprefs : MonoBehaviour
 
     }
 
-    public void IniciarNivel(string nivel)
+    public void IniciarNivel(int nivel)
     {
         
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(nivel);
     }
 
-    public void IniciarMenu(string nivel)
+    public void IniciarMenu(int nivel)
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(nivel);
     }
 
-    public void ReiniciarNivel(string nivel)
+    public void ReiniciarNivel(int nivel)
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(nivel);
     }
 
     public void CharSelect(int player)
