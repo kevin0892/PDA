@@ -96,7 +96,7 @@ public class Char_Movement : MonoBehaviour
 
     public void Saltar()
     {
-        if (!Jumping && !Sliding)
+        if (!Jumping/* && !Sliding*/)
         {
             StartCoroutine(toJump());
             _audio._audioSource.PlayOneShot(_audio.jumping);
@@ -105,8 +105,10 @@ public class Char_Movement : MonoBehaviour
 
     public void Deslizar()
     {
-        if (!Jumping && !Sliding)
+        if (/*!Jumping && */!Sliding)
         {
+            //StopCoroutine(toJump());
+            //yFinal = 0.0f;
             StartCoroutine(toSlide());
             _audio._audioSource.PlayOneShot(_audio.sliding);
         }
@@ -156,6 +158,40 @@ public class Char_Movement : MonoBehaviour
        
         Sliding = true;
         float x = 0;
+
+        if (Jumping == true)
+        {
+            print("jumpingtrue");
+            
+            
+            Jumping = false;
+            while (x < SlideUpDownDuration)
+            {
+                x += Time.deltaTime;
+                zRotation = slideCurve.Evaluate(x / SlideDuration) * SlideScale;
+
+                yield return null;
+            }
+            yield return new WaitForSeconds(SlideDuration);
+            while (x > 0)
+            {
+                x -= Time.deltaTime;
+                zRotation = slideCurve.Evaluate(x / SlideDuration) * SlideScale;
+
+                yield return null;
+            }
+            Sliding = false;
+            if (anim.gameObject.activeInHierarchy == true)
+            {
+                anim.SetBool("isSliding", false);
+            }
+            if (anim2.gameObject.activeInHierarchy == true)
+            {
+                anim2.SetBool("isSliding", false);
+            }
+        }
+        else {
+            print("jumpingfalse");
         while (x < SlideUpDownDuration)
         {
             x += Time.deltaTime;
@@ -180,7 +216,7 @@ public class Char_Movement : MonoBehaviour
         {
             anim2.SetBool("isSliding", false);
         }
-        
+        }
     }
 
     private void Bullets()
