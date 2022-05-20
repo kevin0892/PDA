@@ -21,11 +21,13 @@ public class _ThirdPersonController : MonoBehaviour
 
 
 
+
     void Start()
     {
         Actions = GetComponent<Actions>();
         Control = GetComponent<ThirdPersonUserControl>();
         Rigidbody = GetComponent<Rigidbody>();
+        Time.timeScale=1;
     }
 
    

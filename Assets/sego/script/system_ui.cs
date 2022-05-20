@@ -14,9 +14,9 @@ public class system_ui : MonoBehaviour
         PanelConfig.SetActive(true);
     }
 
-    public void VolverAlMapa()
+    public void VolverAlMapa(int indexScene)
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(indexScene);
     }
 
     public void AbrirLevel02()
