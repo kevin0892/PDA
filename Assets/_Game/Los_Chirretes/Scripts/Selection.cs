@@ -150,15 +150,15 @@ public class Selection : MonoBehaviour
         }
         if (_playerPrefs.numPuntaje <= 0 && number == 0)
         {
-            StartCoroutine(sendNotification("No has recogido ningún coleccionable de Unity", 3));
+            StartCoroutine(sendNotification("No has recogido coleccionables de Unity", 3));
         }
         if (_playerPrefs.numPuntajeComputer <= 0 && number == 2)
         {
-            StartCoroutine(sendNotification("No has recogido ningún coleccionable de Computadora", 3));
+            StartCoroutine(sendNotification("No has recogido coleccionables de Computadora", 3));
         }
         if (_playerPrefs.numPuntajeMouse <= 0 && number == 1)
         {
-            StartCoroutine(sendNotification("No has recogido ningún coleccionable de Periféricos", 3));
+            StartCoroutine(sendNotification("No has recogido coleccionables de Perifericos", 3));
         }
 
 

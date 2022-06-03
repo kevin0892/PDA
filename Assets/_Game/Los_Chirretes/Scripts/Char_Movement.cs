@@ -42,6 +42,10 @@ public class Char_Movement : MonoBehaviour
     //Life System
     public int lives;
     public GameObject[] hearts;
+
+    //Tuto
+    public GameObject slider_saltar;
+    public GameObject slider_deslizar;
     
 
     // Start is called before the first frame update
@@ -101,16 +105,27 @@ public class Char_Movement : MonoBehaviour
             StartCoroutine(toJump());
             _audio._audioSource.PlayOneShot(_audio.jumping);
         }
+
+        if (slider_saltar.activeInHierarchy == true)
+        {
+            slider_saltar.SetActive(false);
+        }
     }
 
     public void Deslizar()
     {
-        if (/*!Jumping && */!Sliding)
+        if (!Jumping && !Sliding)
         {
             //StopCoroutine(toJump());
             //yFinal = 0.0f;
             StartCoroutine(toSlide());
             _audio._audioSource.PlayOneShot(_audio.sliding);
+        }
+
+        if (slider_deslizar.activeInHierarchy == true)
+        {
+            slider_deslizar.SetActive(false);
+            
         }
     }
 

@@ -15,7 +15,11 @@ public class Playerprefs : MonoBehaviour
     public int numPuntajeMouse;
     public int numPuntajeComputer;
     public Game_Over gameOver;
+    public GameObject confirmButton;
+    public GameObject playerPrefsBtn;
     public Selection selection;
+    public Toggle toggle_tutorial;
+    public GameObject tuto_panel;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +30,20 @@ public class Playerprefs : MonoBehaviour
         numPuntajeMouse = PlayerPrefs.GetInt("Mouse", 0);
         textoPuntajeGlobalComputer.text = PlayerPrefs.GetInt("Computer", 0).ToString();
         numPuntajeComputer = PlayerPrefs.GetInt("Computer", 0);
+        if (confirmButton != null)
+        {
+            confirmButton.SetActive(false);
+        }
+        if (tuto_panel != null)
+        {
+            tuto_panel.SetActive(intToBool(PlayerPrefs.GetInt("Tuto_Panel", 0)));
+            
+        }
+        if (toggle_tutorial != null)
+        {
+            toggle_tutorial.isOn = (intToBool(PlayerPrefs.GetInt("Tuto_Panel", 0)));
+        }
+        
 
     }
 
@@ -87,7 +105,28 @@ public class Playerprefs : MonoBehaviour
         textoPuntajeGlobalMouse.text = PlayerPrefs.GetInt("Mouse", 0).ToString();
         
         textoPuntajeGlobalComputer.text = PlayerPrefs.GetInt("Computer", 0).ToString();
+
+        confirmButton.SetActive(false);
+        playerPrefsBtn.SetActive(true);
         
+    }
+
+    public void ConfirmDelete()
+    {
+        if (confirmButton.activeSelf == false)
+        {
+            confirmButton.SetActive(true);
+            playerPrefsBtn.SetActive(false);
+        }
+    }
+
+    public void BackDelete()
+    {
+        if (confirmButton.activeSelf == true)
+        {
+            confirmButton.SetActive(false);
+            playerPrefsBtn.SetActive(true);
+        }
     }
 
     public void QuitApp()
@@ -96,5 +135,35 @@ public class Playerprefs : MonoBehaviour
         print("hola");
     }
 
+    public void ToggleTuto()
+    {
+        if (toggle_tutorial.isOn == false)
+        {
+            PlayerPrefs.SetInt("Tuto_Panel", boolToInt(false));
+            
+        }
+        else if (toggle_tutorial.isOn == true)
+        {
+            PlayerPrefs.SetInt("Tuto_Panel", boolToInt(true));
+            
+        }
+
+    }
+
+    int boolToInt(bool val)
+    {
+        if (val)
+            return 1;
+        else
+            return 0;
+    }
+
+    bool intToBool(int val)
+    {
+        if (val != 0)
+            return true;
+        else
+            return false;
+    }
 
 }
